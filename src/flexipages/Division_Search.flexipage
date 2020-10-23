@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>AS_DivisionSearch_Header</componentName>
+        </componentInstances>
+        <name>region1</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>AS_DivisionSearch_Form</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>AS_DivisionSearch_Results</componentName>
+        </componentInstances>
+        <name>region2</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>AS_DivisionSearch_Map</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>AS_DivisionSearch_details</componentName>
+        </componentInstances>
+        <name>region3</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Division Search</masterLabel>
+    <template>
+        <name>flexipage:appHomeTemplateHeaderTwoColumnsEqualWidth</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

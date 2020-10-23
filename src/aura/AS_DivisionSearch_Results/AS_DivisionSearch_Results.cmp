@@ -1,0 +1,27 @@
+<aura:component controller="AS_DivisionSearch_ResultsController" implements="flexipage:availableForAllPageTypes"
+                access="global">
+
+    <!-- Imports -->
+    <!--        <aura:import library="lightningcomponentdemo:mockdataFaker" property="mockdataLibrary"/>-->
+
+    <!-- attributes -->
+    <aura:attribute name="accountWrappers" type="Object[]"/>
+    <aura:attribute name="columns" type="List"/>
+
+    <!-- handlers-->
+    <aura:handler event="c:AS_DivisionSearch_SearchEvent" action="{!c.handleEvent}"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+
+    <lightning:card title="Results" iconName="standard:partner_fund_request">
+        <!-- the container element determine the height of the datatable -->
+        <div class="slds-p-horizontal_medium slds-p-vertical_medium">
+            <lightning:datatable
+                    keyField="id"
+                    data="{! v.accountWrappers }"
+                    columns="{! v.columns }"
+                    hideCheckboxColumn="true"
+                    onrowaction="{!c.consoleLog}"
+            />
+        </div>
+    </lightning:card>
+</aura:component>
