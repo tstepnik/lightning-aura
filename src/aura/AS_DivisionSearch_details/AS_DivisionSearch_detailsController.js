@@ -1,7 +1,9 @@
 ({
 
     handler: function(cmp,event,helper){
-        let id = event.getParam('accountId');
-        cmp.set('v.accountId',id);
+        console.log('account wrapper');
+        console.log(event.getParam('accountWrapper'));
+        let id = event.getParam('accountWrapper');
+        cmp.set('v.wrapper',id);
     }
 })

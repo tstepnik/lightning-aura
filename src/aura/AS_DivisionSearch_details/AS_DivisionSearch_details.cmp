@@ -2,10 +2,10 @@
 
     <aura:handler event="c:AS_DivisionSearch_SelectAccountEvent" action="{!c.handler}"/>
 
-    <aura:attribute name="accountId" type="String"/>
+    <aura:attribute name="wrapper" type="Object"/>
 
     <lightning:card title="Results" iconName="standard:partner_fund_request">
-        <lightning:recordViewForm recordId="{!v.accountId}" objectApiName="Account">
+        <lightning:recordViewForm recordId="{!v.wrapper.recordId}" objectApiName="Account">
             <lightning:layout multipleRows="true">
 
 

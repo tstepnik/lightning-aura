@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_Form.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_Form.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,19 +62,19 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603456274743" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603456293859" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603454713000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603454713000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603454938647" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603454713000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_SELECTACCOUNTEVENT" value="1603454713000" />
-                      <entry key="AURA/SPINNER" value="1603454713000" />
-                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603454713000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603454712000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603454713000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603454713000" />
-                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603457347362" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603456777000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603456777000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603456777000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603457292575" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603456777000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_SELECTACCOUNTEVENT" value="1603456777000" />
+                      <entry key="AURA/SPINNER" value="1603456777000" />
+                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603456777000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603456776000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603456777000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603456777000" />
+                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603456777000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />

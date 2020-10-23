@@ -3,5 +3,5 @@
  -->
 
 <aura:event type="APPLICATION" description="AS_DivisionSearch_SelectAccountEvent">
-    <aura:attribute type="String" name="accountId"/>
+    <aura:attribute type="Object" name="accountWrapper"/>
 </aura:event>
