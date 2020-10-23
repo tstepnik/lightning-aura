@@ -13,12 +13,9 @@
         action.setCallback(this, function(response) {
             const status = response.getState();
             if (status === 'SUCCESS') {
-                console.log('Before get event')
+
                 let event = $A.get('e.c:AS_DivisionSearch_SearchEvent');
-                event.setParams({"param": response.getReturnValue()});
-                console.log('After get event')
-
-
+                event.setParams({"params": response.getReturnValue()});
                 event.fire();
                 this.handleShowToast(component, event, 'Success', 'success', 'Success operation');
             } else {
@@ -37,6 +34,9 @@
         component.find('spinner').showSpinner();
     },
     hideSpinner: function(component) {
+
+        console.log('SPINNER');
+        console.log(component.find('spinner'));
         component.find('spinner').hideSpinner();
     },
 

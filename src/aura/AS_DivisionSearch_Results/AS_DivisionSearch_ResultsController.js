@@ -1,19 +1,28 @@
 ({
-    init: function (cmp, event, helper) {
-        cmp.set('v.columns', [
-            {label: 'Account name', fieldName: 'name', type: 'text'},
-            {label: 'Country', fieldName: 'country', type: 'text'},
-            {label: 'Rating', fieldName: 'rating', type: 'text'},
-            {label: 'City', fieldName: 'city', type: 'text'},
-            {label: 'Active', fieldName: 'active', type: 'text'},
-            {label: 'Upsell Opportunity', fieldName: 'upsellOpportunity', type: 'text'},
-        ]);
-    },
+//    tableRowClicked: function(component, event, helper) {
+//        let shopId = event.currentTarget.dataset.id;
+//        let index = event.currentTarget.dataset.index;
+//        let selectedRowIndex = component.get("v.selectedRowIndex");
+//        if (!$A.util.isUndefinedOrNull(selectedRowIndex)) {
+//            helper.removeHighlightFromAllRows(component);
+//        }
+//        let rows = component.find("row");
+//        $A.util.addClass(rows[index], "row-highlighted");
+//        component.set("v.selectedAccount", index);
+//        helper.sendRecord(component, index);
+//        helper.showShopDetails(component, shopId);
+//    },
+
+//    removeHighlightFromAllRowsEventAction: function(component, event, helper) {
+//                 helper.removeHighlightFromAllRows(component);
+//         },
+
+
 
     handleEvent: function(cmp, event, helper) {
-        helper.handleEvent(cmp,event);
+        helper.handleEvent(cmp, event);
     },
-    consoleLog : function(cmp, event, helper){
+    consoleLog: function(cmp, event, helper) {
         console.log('ON ROW ACTION DZIALA');
     }
 });

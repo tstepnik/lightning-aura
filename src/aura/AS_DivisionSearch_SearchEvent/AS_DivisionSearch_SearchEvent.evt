@@ -1,4 +1,4 @@
 
 <aura:event type="APPLICATION" description="AS_DivisionSearch_SearchEvent">
-    <aura:attribute type="Object[]" name="param"/>
+    <aura:attribute type="Object[]" name="accounts"/>
 </aura:event>
