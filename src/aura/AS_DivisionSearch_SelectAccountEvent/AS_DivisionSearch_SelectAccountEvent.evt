@@ -1,0 +1,7 @@
+<!--
+ - Created by BRITENET on 23.10.2020.
+ -->
+
+<aura:event type="APPLICATION" description="AS_DivisionSearch_SelectAccountEvent">
+    <aura:attribute type="String" name="accountId"/>
+</aura:event>

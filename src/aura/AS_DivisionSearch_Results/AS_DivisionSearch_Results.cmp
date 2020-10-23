@@ -13,15 +13,53 @@
     <aura:handler name="init" value="{! this }" action="{! c.init }"/>
 
     <lightning:card title="Results" iconName="standard:partner_fund_request">
-        <!-- the container element determine the height of the datatable -->
-        <div class="slds-p-horizontal_medium slds-p-vertical_medium">
-            <lightning:datatable
-                    keyField="id"
-                    data="{! v.accountWrappers }"
-                    columns="{! v.columns }"
-                    hideCheckboxColumn="true"
-                    onrowaction="{!c.consoleLog}"
-            />
-        </div>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">
+                    <div class="slds-truncate" title="Account name">Account name</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Country">Country</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Rating">Rating</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="City">City</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Active">Active</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Upsell Opportunity">Upsell Opportunity</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <aura:iteration items="{!v.accountWrappers}" var="wrapper" indexVar="index">
+                <tr >
+                    <td data-label="Account name">
+                        <lightning:formattedText value="{!wrapper.name}"/>
+                    </td>
+                    <td data-label="Country">
+                        <lightning:formattedText value="{!wrapper.country}"/>
+                    </td>
+                    <td data-label="Rating">
+                        <lightning:formattedText value="{!wrapper.rating}"/>
+                    </td>
+                    <td data-label="City">
+                        <lightning:formattedText value="{!wrapper.city}"/>
+                    </td>
+                    <td data-label="Active">
+                        <lightning:formattedText value="{!wrapper.active}"/>
+                    </td>
+                    <td data-label="Upsell Opportunity">
+                        <lightning:formattedText value="{!wrapper.upsellOpportunity}"/>
+                    </td>
+                </tr>
+            </aura:iteration>
+            </tbody>
+        </table>
     </lightning:card>
 </aura:component>
