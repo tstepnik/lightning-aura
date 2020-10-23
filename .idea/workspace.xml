@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LightningAura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LightningAura.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.cmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,13 +17,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Lightning Controller" />
         <option value="Lightning Component" />
         <option value="Lightning Design" />
-        <option value="Lightning Style" />
         <option value="Apex Class" />
         <option value="Lightning Application Event" />
         <option value="Apex Metadata" />
+        <option value="Lightning Style" />
+        <option value="Lightning Controller" />
       </list>
     </option>
   </component>
@@ -62,19 +63,19 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603453455000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603453455000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603453455000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603453455000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603453515864" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603453455000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_SELECTACCOUNTEVENT" value="1603453455000" />
-                      <entry key="AURA/SPINNER" value="1603453455000" />
-                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603453455000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603453454000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603453455000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603453455000" />
-                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603453455000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603455190695" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603454938647" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_SELECTACCOUNTEVENT" value="1603454713000" />
+                      <entry key="AURA/SPINNER" value="1603454713000" />
+                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603454713000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603454712000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603454713000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603454713000" />
+                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603454713000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -2180,6 +2181,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1920" y="12" width="1560" height="1019" key="dock-window-4/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603441029162" />
+    <state x="1920" y="0" width="1577" height="903" key="dock-window-8" timestamp="1603455209286">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1577" height="903" key="dock-window-8/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603455209286" />
     <state x="846" y="111" width="925" height="765" key="find.popup" timestamp="1603444579095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

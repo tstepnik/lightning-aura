@@ -1,13 +1,16 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
 
-    <lightning:card title="Results" iconName="standard:partner_fund_request">
+    <aura:handler event="c:AS_DivisionSearch_SelectAccountEvent" action="{!c.handler}"/>
 
-    <lightning:recordViewForm recordId="0012X000024UJBeQAO" objectApiName="Account">
+    <aura:attribute name="accountId" type="String"/>
+
+    <lightning:card title="Results" iconName="standard:partner_fund_request">
+    <lightning:recordViewForm recordId="{!v.accountId}" objectApiName="Account">
             <div class="slds-p-bottom_large slds-p-left_large">
                 <lightning:outputField fieldName="Name" />
                 <lightning:outputField fieldName="Email__c" />
-                <lightning:outputField fieldName="BillingCountry" />
-                <lightning:outputField fieldName="BillingStreet" />
+                <lightning:outputField fieldName="BillingCountry"/>
+                <lightning:outputField fieldName="BillingStreet"/>
             </div>
         </lightning:recordViewForm>
     </lightning:card>
