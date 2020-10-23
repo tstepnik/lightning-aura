@@ -23,11 +23,9 @@
             <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
             <lightning:input aura:id="field" label="Name" value="{!v.accountName}" class="slds-large-size_1-of-1"/>
             </lightning:layoutItem>
-
             <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
             <lightning:input aura:id="field" label="Country" value="{!v.country}" class="slds-large-size_1-of-1"/>
             </lightning:layoutItem>
-
             <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
                 <lightning:select value="{!v.active}" label="Active">
                 <option value=""></option>
@@ -49,11 +47,6 @@
                     <option value="Warm">Warm</option>
                 </lightning:select>
             </lightning:layoutItem>
-
-<!--            <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">-->
-<!--                <lightning:input aura:id="field" label="Upsell Opportunity" value="{!v.upsellOpportunity}" class="slds-large-size_1-of-1"/>-->
-<!--            </lightning:layoutItem>-->
-
             <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
                 <lightning:select value="{!v.upsellOpportunity}" label="Upsell Opportunity">
                     <option value=""></option>

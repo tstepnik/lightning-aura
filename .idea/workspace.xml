@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_Results.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_Form.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_Form.cmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +60,8 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603455190695" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603454713000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603456274743" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603456293859" />
                       <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603454713000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603454713000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603454938647" />
@@ -2169,6 +2166,10 @@
     <state x="1920" y="3" width="1583" height="717" key="dock-window-1/3840.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603379993017" />
     <state x="1920" y="0" width="1560" height="575" key="dock-window-1/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603438763203" />
     <state x="314" y="0" width="1580" height="1027" maximized="true" key="dock-window-1/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1603434692644" />
+    <state x="3856" y="18" width="1577" height="880" key="dock-window-10" timestamp="1603456495794">
+      <screen x="3840" y="0" width="1536" height="832" />
+    </state>
+    <state x="3856" y="18" width="1577" height="880" key="dock-window-10/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603456495794" />
     <state x="3840" y="143" width="1550" height="504" maximized="true" key="dock-window-2" timestamp="1603438127588">
       <screen x="3840" y="0" width="1536" height="832" />
     </state>
@@ -2185,6 +2186,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1920" y="0" width="1577" height="903" key="dock-window-8/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603455209286" />
+    <state x="1920" y="0" width="1577" height="903" maximized="true" key="dock-window-9" timestamp="1603455866037">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1920" y="0" width="1577" height="903" maximized="true" key="dock-window-9/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603455866037" />
     <state x="846" y="111" width="925" height="765" key="find.popup" timestamp="1603444579095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -2194,10 +2199,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="748" height="500" key="javadoc.popup.new/0.0.1536.824/-1920.3.1920.1040@0.0.1536.824" timestamp="1603397172455" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1603438596337">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1603456083077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/3840.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603383019796" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603438596337" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/3840.0.1536.832/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603456083077" />
   </component>
 </project>
