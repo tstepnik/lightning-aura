@@ -17,5 +17,4 @@
                 onmarkerselect="{!c.handleAccount}"
                 selectedMarkerValue="{!v.selectedMarkerValue}"
                  />
-
 </aura:component>

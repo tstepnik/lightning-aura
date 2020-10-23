@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="" />
+    <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_Map.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_Map.cmp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,9 @@
         <option value="Apex Metadata" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IlluminatedCloudWorkspaceSettings">
     <option name="moduleWorkspaceSettings">
@@ -53,18 +58,18 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603444472000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603441858000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603441858000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603442954479" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603441858000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603441858000" />
-                      <entry key="AURA/SPINNER" value="1603441858000" />
-                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603441858000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603443811898" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603441858000" />
-                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603441858000" />
-                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603441858000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603444725000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603444725000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603444725000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603444725000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603444725000" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603444725000" />
+                      <entry key="AURA/SPINNER" value="1603444725000" />
+                      <entry key="CLASSES/ACCOUNTWRAPPER.CLS" value="1603444725000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCHSERVICE.CLS" value="1603444721000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_FORMCONTROLLER.CLS" value="1603444725000" />
+                      <entry key="CLASSES/AS_DIVISIONSEARCH_RESULTSCONTROLLER.CLS" value="1603444725000" />
+                      <entry key="FLEXIPAGES/DIVISION_SEARCH.FLEXIPAGE" value="1603444725000" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
@@ -2104,6 +2109,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1jEc65FspBBjaJviTMlU0AD12J3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
   </component>
