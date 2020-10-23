@@ -6,12 +6,12 @@
 //                eventShowLocalization.fire();
 //        },
 
-            removeHighlightFromAllRows: function(component, shopId) {
-                  let rows = component.find("row");
-                  for(let i=0; i< rows.length; i++){
-                 $A.util.removeClass(rows[i], "row-highlighted");
-                  }
-            },
+//            removeHighlightFromAllRows: function(component, shopId) {
+//                  let rows = component.find("row");
+//                  for(let i=0; i< rows.length; i++){
+//                 $A.util.removeClass(rows[i], "row-highlighted");
+//                  }
+//            },
 
 
     handleEvent: function(cmp, event) {

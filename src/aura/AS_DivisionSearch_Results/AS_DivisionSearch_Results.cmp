@@ -52,7 +52,7 @@
         </thead>
         <tbody>
         <aura:iteration items="{!v.accountWrappers}" var="wrapper" indexVar="index">
-            <tr aura:id="row" onclick="{!c.tableRowClicked}" data-id="{!shop.Id}" data-index="{!index}">
+            <tr >
                 <td data-label="Account name">
                     <lightning:formattedText value="{!wrapper.name}"/>
                 </td>
