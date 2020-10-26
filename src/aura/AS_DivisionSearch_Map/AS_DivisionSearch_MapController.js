@@ -1,6 +1,7 @@
 ({
  displayAllAccounts: function(cmp, event, helper){
      helper.handleEvent(cmp,event);
+     cmp.set('v.zoomLevel',0);
  },
      showChosenRecord : function(component, event, helper) {
          let listOfPointers = [{
@@ -14,7 +15,7 @@
              title: event.getParam('accountWrapper').name || ''
          }];
          component.set('v.mapMarkers', listOfPointers);
-          component.set('v.zoomLevel', 17);
+//          component.set('v.zoomLevel', 17);
 
      }
 });

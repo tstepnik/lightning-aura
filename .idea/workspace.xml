@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_MapHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_Map.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_Map.cmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_MapController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Map/AS_DivisionSearch_MapController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SearchEvent/AS_DivisionSearch_SearchEvent.evt" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SearchEvent/AS_DivisionSearch_SearchEvent.evt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_SelectAccountEvent/AS_DivisionSearch_SelectAccountEvent.evt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +63,7 @@
                       <entry key="AURA/AS_DIVISIONSEARCH_DETAILS" value="1603749892000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_FORM" value="1603749892000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_HEADER" value="1603749892000" />
-                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603750983124" />
+                      <entry key="AURA/AS_DIVISIONSEARCH_MAP" value="1603751770211" />
                       <entry key="AURA/AS_DIVISIONSEARCH_RESULTS" value="1603749892000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_SEARCHEVENT" value="1603749892000" />
                       <entry key="AURA/AS_DIVISIONSEARCH_SELECTACCOUNTEVENT" value="1603750663780" />
