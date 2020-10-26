@@ -1,34 +1,39 @@
 <aura:component implements="flexipage:availableForAllPageTypes" access="global">
 
+    <aura:attribute name="isRecordEdited" type="Boolean"/>
     <aura:handler event="c:AS_DivisionSearch_SelectAccountEvent" action="{!c.handler}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
     <aura:attribute name="wrapper" type="Object"/>
 
-<!--    <lightning:card title="Results" iconName="standard:partner_fund_request" >-->
-<!--        <lightning:recordViewForm recordId="{!v.wrapper.recordId}" objectApiName="Account">-->
-<!--            <lightning:layout multipleRows="true">-->
 
+    <aura:if isTrue="{!(!v.isRecordEdited)}">
+        <lightning:card title="Results" iconName="standard:partner_fund_request" >
+            <lightning:recordViewForm recordId="{!v.wrapper.recordId}" objectApiName="Account">
+                <lightning:layout multipleRows="true">
+                    <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
+                        <lightning:outputField fieldName="Name"/>
+                        <lightning:inputField  fieldName="Name"/>
+                        <lightning:outputField fieldName="Email__c"/>
+                        <lightning:outputField fieldName="BillingCountry"/>
+                        <lightning:outputField fieldName="BillingStreet"/>
+                        <lightning:outputField fieldName="RecordTypeId"/>
+                        <lightning:outputField fieldName="SLA__c"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
+                        <lightning:outputField fieldName="SLAExpirationDate__c"/>
+                        <lightning:outputField fieldName="SLASerialNumber__c"/>
+                        <lightning:outputField fieldName="Total_Invoiced__c"/>
+                        <lightning:outputField fieldName="UpsellOpportunity__c"/>
+                        <lightning:outputField fieldName="NumberOfEmployees"/>
+                    </lightning:layoutItem>
+                    <lightning:button class="slds-m-top_small" variant="neutral" label="Edit" onclick="{!c.showEditForm}"/>
 
-<!--                <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">-->
-<!--                    <lightning:outputField fieldName="Name"/>-->
-<!--                    <lightning:inputField  fieldName="Name"/>-->
-<!--                    <lightning:outputField fieldName="Email__c"/>-->
-<!--                    <lightning:outputField fieldName="BillingCountry"/>-->
-<!--                    <lightning:outputField fieldName="BillingStreet"/>-->
-<!--                    <lightning:outputField fieldName="RecordTypeId"/>-->
-<!--                    <lightning:outputField fieldName="SLA__c"/>-->
-<!--                </lightning:layoutItem>-->
-<!--                <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">-->
-<!--                    <lightning:outputField fieldName="SLAExpirationDate__c"/>-->
-<!--                    <lightning:outputField fieldName="SLASerialNumber__c"/>-->
-<!--                    <lightning:outputField fieldName="Total_Invoiced__c"/>-->
-<!--                    <lightning:outputField fieldName="UpsellOpportunity__c"/>-->
-<!--                    <lightning:outputField fieldName="NumberOfEmployees"/>-->
-<!--                </lightning:layoutItem>-->
-<!--            </lightning:layout>-->
-<!--        </lightning:recordViewForm>-->
-<!--    </lightning:card>-->
-
+                </lightning:layout>
+            </lightning:recordViewForm>
+        </lightning:card>
+    </aura:if>
+    <aura:if isTrue="{!v.isRecordEdited}">
     <lightning:card title="Results" iconName="standard:partner_fund_request">
         <lightning:recordEditForm recordId="{!v.wrapper.recordId}" objectApiName="Account" >
             <lightning:layout multipleRows="true">
@@ -49,8 +54,10 @@
                     <lightning:inputField fieldName="UpsellOpportunity__c"/>
                     <lightning:inputField fieldName="NumberOfEmployees"/>
                 </lightning:layoutItem>
+                <lightning:button class="slds-m-top_small" variant="neutral" label="Save" onclick=""/>
+                <lightning:button class="slds-m-top_small" variant="neutral" label="Cancel" onclick="{!c.hideEditForm}"/>
             </lightning:layout>
         </lightning:recordEditForm>
     </lightning:card>
-
+    </aura:if>
 </aura:component>
