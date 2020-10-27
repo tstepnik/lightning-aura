@@ -1,4 +1,27 @@
-<aura:component  implements="flexipage:availableForAllPageTypes" access="global">
+<aura:component  implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="showNewRecordModal" type="Boolean"/>
+    <aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Industry','BillingCountry','BillingCity','BillingStreet']" />
+    <aura:attribute name="recordId" type="String"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+
+    <aura:if isTrue="{!v.showNewRecordModal}">
+        <div role="dialog" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <lightning:card title="New Account" iconName="standard:entity">
+                    <lightning:recordForm
+                            onerror="{!c.handleError}"
+                            columns="2"
+                            objectApiName="Account"
+                            fields="{!v.fields}"
+                            onsuccess="{!c.handleSuccess}"
+                            oncancel="{!c.closeModal}"
+                    />
+                </lightning:card>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+
     <div class="slds-page-header slds-page-header_related-list">
         <div class="slds-page-header__row">
             <div class="slds-page-header__col-title">
@@ -29,7 +52,7 @@
                         <ul class="slds-button-group-list">
                             <li>
 
-                                <lightning:button aura:id="submit" type="submit" variant="brand" label="New Accounts" onclick="{!c.search}" />
+                                <lightning:button aura:id="submit" type="submit" variant="brand" label="New Accounts" onclick="{!c.handleNewRecordModal}" />
 
                             </li>
                             <li>
@@ -55,4 +78,5 @@
             </div>
         </div>
     </div>
+
 </aura:component>

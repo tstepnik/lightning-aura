@@ -8,7 +8,7 @@
             rating: component.get('v.rating'),
             city: component.get('v.city'),
             active: component.get('v.active'),
-            upsellOpportunity: component.get('v.upsellOpportunity')});
+           });
 
         action.setCallback(this, function(response) {
             const status = response.getState();
@@ -54,6 +54,5 @@
         component.set('v.country', '');
         component.set('v.active', '');
         component.set('v.rating', '');
-        component.set('v.upsellOpportunity', '');
     },
 })

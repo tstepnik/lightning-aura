@@ -33,9 +33,6 @@
                 <th scope="col">
                     <div class="slds-truncate" title="Active">Active</div>
                 </th>
-                <th scope="col">
-                    <div class="slds-truncate" title="Upsell Opportunity">Upsell Opportunity</div>
-                </th>
             </tr>
             </thead>
             <tbody>
@@ -55,9 +52,6 @@
                     </td>
                     <td data-label="Active">
                         <lightning:formattedText value="{!wrapper.active}"/>
-                    </td>
-                    <td data-label="Upsell Opportunity">
-                        <lightning:formattedText value="{!wrapper.upsellOpportunity}"/>
                     </td>
                 </tr>
             </aura:iteration>

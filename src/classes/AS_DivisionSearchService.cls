@@ -6,7 +6,7 @@ public with sharing class AS_DivisionSearchService {
 
 
     public static String queryGenerator(Map<String, String> parameters) {
-        String query = 'SELECT Id,Name,BillingCountry, Rating, BillingCity, BillingStreet, Active__c, UpsellOpportunity__c FROM Account WHERE RecordType.Name = \'Division\'';
+        String query = 'SELECT Id,Name,BillingCountry, Rating, BillingCity, BillingStreet, Active__c FROM Account WHERE RecordType.Name = \'Division\'';
 
         if (emptyParameters(parameters)) {
             return query;
@@ -48,7 +48,6 @@ public with sharing class AS_DivisionSearchService {
                     account.Rating,
                     account.BillingCity,
                     account.Active__c,
-                    account.UpsellOpportunity__c,
                     account.BillingStreet
             ));
         }

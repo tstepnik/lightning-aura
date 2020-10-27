@@ -8,10 +8,9 @@
     <aura:attribute name="rating" type="String"/>
     <aura:attribute name="city" type="String"/>
     <aura:attribute name="active" type="String"/>
-    <aura:attribute name="upsellOpportunity" type="String"/>
 
     <aura:registerEvent name="searchEvent" type="c:AS_DivisionSearch_SearchEvent"/>
-
+    <aura:handler event="c:AS_DivisionSearch_RefreshTableEvent" action="{!c.search}"/>
     <ltng:require styles="{!$Resource.noheader}"/>
 
     <lightning:notificationsLibrary aura:id="notification"/>
@@ -47,15 +46,6 @@
                     <option value="Warm">Warm</option>
                 </lightning:select>
             </lightning:layoutItem>
-            <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
-                <lightning:select value="{!v.upsellOpportunity}" label="Upsell Opportunity">
-                    <option value=""></option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                    <option value="Maybe">Maybe</option>
-                </lightning:select>
-            </lightning:layoutItem>
-
             <lightning:layoutItem size="12" class="slds-p-horizontal_medium slds-p-vertical_medium slds-text-align_right">
                 <lightning:button aura:id="clear" type="reset" variant="neutral" label="Clear" onclick="{!c.clear}" />
                 <lightning:button aura:id="submit" type="submit" variant="brand" label="Search Account" onclick="{!c.search}" />
