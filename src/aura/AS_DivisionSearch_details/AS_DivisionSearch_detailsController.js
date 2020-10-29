@@ -1,15 +1,11 @@
 ({
-    doInit: function(component) {
+    doInit: function(component, helper) {
         component.set('v.isRecordEdited', false);
-        component.set('v.isRecordClicked', false);
-        component.set('v.wrapperIsNotNull', true);
+                       component.set('v.isRecordClicked', false);
+                       component.set('v.wrapperIsNotNull', true);
     },
     handler: function(component, event, helper) {
-        let id = event.getParam('accountWrapper');
-        component.set('v.wrapper', id);
-        component.set('v.accountIdd',id.recordId);
-        component.set('v.isRecordClicked', true);
-        component.set('v.wrapperIsNotNull', true);
+      helper.handler(component,event);
     },
     showEditForm: function(component, event, helper) {
         component.set('v.isRecordEdited', true);
@@ -20,15 +16,7 @@
     },
 
     saveEdit: function(component,event,helper){
-        let hideEditFormAction = component.get('c.hideEditForm');
-        $A.enqueueAction(hideEditFormAction);
-        helper.refreshTable(component);
-             component.find('notification').showToast({
-                                "title": 'Success',
-                                "variant": 'success',
-                                "message": 'Account successfully updated'
-                            });
-
+  helper.saveEdit(component,event);
     },
 
     handleConfirmDialog: function(component, event, helper) {
