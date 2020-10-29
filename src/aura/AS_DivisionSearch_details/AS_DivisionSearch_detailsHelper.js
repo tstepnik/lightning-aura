@@ -24,7 +24,6 @@
 
                     });
                     event.fire();
-                    console.log("EVENT SIE WYSYLA");
 
                 } else {
                     component.find('notification').showToast({
@@ -48,7 +47,6 @@
         let event = $A.get('e.c:AS_DivisionSearch_RefreshTableEvent');
              event.fire();
 
-        console.log('FIRE EVENT DZIALA');
     },
     editItem: function(component){
 

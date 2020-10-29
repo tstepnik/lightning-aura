@@ -5,7 +5,6 @@
     },
     handleDeleteEvent: function(component,event){
 
-  console.log('table in handleDeleteEvent method');
         let recordId = event.getParam('recordId');
         let oldData = component.get('v.accountWrappers');
         let newData = [];

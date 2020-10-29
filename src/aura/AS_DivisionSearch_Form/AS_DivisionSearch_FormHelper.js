@@ -13,10 +13,8 @@
         action.setCallback(this, function(response) {
             const status = response.getState();
             if (status === 'SUCCESS') {
-                console.log('Before get event')
                 let event = $A.get('e.c:AS_DivisionSearch_SearchEvent');
                 event.setParams({"param": response.getReturnValue()});
-                console.log('After get event')
 
 
                 event.fire();

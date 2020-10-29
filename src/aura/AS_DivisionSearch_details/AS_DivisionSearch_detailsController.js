@@ -20,10 +20,14 @@
     },
 
     saveEdit: function(cmp,event,helper){
-        console.log('WCHODZI DO SAVE EDIT');
         let hideEditFormAction = cmp.get('c.hideEditForm');
         $A.enqueueAction(hideEditFormAction);
         helper.refreshTable(cmp);
+             cmp.find('notification').showToast({
+                                "title": 'Success',
+                                "variant": 'success',
+                                "message": 'Account successfully updated'
+                            });
 
     },
 
@@ -40,7 +44,6 @@
     },
 
     handleConfirmDialogNo: function(component, event, helper) {
-        console.log('No');
         component.set('v.showConfirmDialog', false);
     },
 })
