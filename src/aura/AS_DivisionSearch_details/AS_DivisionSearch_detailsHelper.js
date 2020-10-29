@@ -10,8 +10,11 @@ removeItem: function(cmp){
     $A.enqueueAction(action);
 },
 refreshTable: function(cmp){
+            console.log('TWORZY EVENT');
      let event = $A.get('e.c:AS_DivisionSearch_RefreshTableEvent');
      event.fire();
+
+            console.log('FIRE EVENT DZIALA');
 }
 
 })

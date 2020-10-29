@@ -4,6 +4,7 @@
     <aura:attribute name="isRecordEdited" type="Boolean"/>
     <aura:attribute name="isRecordClicked" type="Boolean"/>
     <aura:attribute name="showConfirmDialog" type="Boolean"/>
+    <aura:attribute name="wrapperIsNotNull" type="Boolean"/>
     <aura:attribute name="wrapper" type="Object"/>
     <aura:handler event="c:AS_DivisionSearch_SelectAccountEvent" action="{!c.handler}"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
@@ -37,7 +38,7 @@
         <div class="slds-backdrop slds-backdrop--open"></div>
     </aura:if>
 
-    <aura:if isTrue="{!(!v.isRecordEdited)}">
+    <aura:if isTrue="{!and(!v.isRecordEdited,v.wrapperIsNotNull)}">
         <lightning:card title="Details" iconName="standard:individual">
             <lightning:recordViewForm recordId="{!v.wrapper.recordId}" objectApiName="Account">
                 <lightning:layout multipleRows="true">
@@ -76,10 +77,10 @@
             </lightning:recordViewForm>
         </lightning:card>
     </aura:if>
-    <aura:if isTrue="{!v.isRecordEdited}">
+    <aura:if isTrue="{!and(v.isRecordEdited,v.wrapperIsNotNull)}">
         <lightning:card title="Details" iconName="standard:individual">
             <lightning:recordEditForm recordId="{!v.wrapper.recordId}" objectApiName="Account"
-                                      onsuccess="{!c.hideEditForm}">
+                                      onsuccess="{!c.saveEdit}">
                 <lightning:layout multipleRows="true">
 
 

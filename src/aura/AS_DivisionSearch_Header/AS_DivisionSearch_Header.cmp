@@ -8,6 +8,7 @@
         <div role="dialog" class="slds-modal slds-fade-in-open ">
             <div class="slds-modal__container">
                 <lightning:card title="New Account" iconName="standard:entity">
+
                     <lightning:recordForm
                             onerror="{!c.handleError}"
                             columns="2"
@@ -16,6 +17,10 @@
                             onsuccess="{!c.handleSuccess}"
                             oncancel="{!c.closeModal}"
                     />
+
+
+
+
                 </lightning:card>
             </div>
         </div>

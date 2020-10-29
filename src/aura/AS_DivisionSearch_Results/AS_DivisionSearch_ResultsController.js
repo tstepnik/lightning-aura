@@ -13,7 +13,9 @@
         //            helper.removeHighlightFromAllRows(component);
         //        }
         let rows = cmp.find("row");
-
+  rows.forEach((element) =>{
+            $A.util.removeClass(element, "row-highlighted");
+        });
         $A.util.addClass(rows[index], "row-highlighted");
          let eventt = $A.get('e.c:AS_DivisionSearch_SelectAccountEvent');
                  console.log('let eventt');
