@@ -9,6 +9,7 @@
         console.log(event.getParam('accountWrapper'));
         let id = event.getParam('accountWrapper');
         cmp.set('v.wrapper', id);
+        cmp.set('v.accountIdd',id.recordId);
         cmp.set('v.isRecordClicked', true);
         cmp.set('v.wrapperIsNotNull', true);
     },

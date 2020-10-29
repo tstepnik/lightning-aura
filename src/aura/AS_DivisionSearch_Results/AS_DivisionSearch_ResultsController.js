@@ -27,5 +27,8 @@
         //        component.set("v.selectedRowIndex", index);
         //        helper.showShopLocalizationOnMap(component, index);
         //        helper.showShopDetails(component, shopId);
+    },
+    handleDeleteEvent: function(component,event,helper){
+        helper.handleDeleteEvent(component,event);
     }
 });

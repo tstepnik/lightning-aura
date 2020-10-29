@@ -5,10 +5,15 @@
     <aura:attribute name="isRecordClicked" type="Boolean"/>
     <aura:attribute name="showConfirmDialog" type="Boolean"/>
     <aura:attribute name="wrapperIsNotNull" type="Boolean"/>
+    <aura:attribute name="accountIdd" type="String"/>
     <aura:attribute name="wrapper" type="Object"/>
     <aura:handler event="c:AS_DivisionSearch_SelectAccountEvent" action="{!c.handler}"/>
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:registerEvent name="accountSelectEvent" type="c:AS_DivisionSearch_RefreshTableEvent" />
+
+    <aura:registerEvent name="deleteRecordEvent" type="c:AS_DivisionSearch_DeleteRecordEvent" />
+    <aura:registerEvent name="editRecordEvent" type="c:AS_DivisionSearch_EditRecordEvent" />
+    <lightning:notificationsLibrary aura:id="notification"/>
 
 
     <aura:if isTrue="{!v.showConfirmDialog}">
