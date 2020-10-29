@@ -2,16 +2,11 @@
     handleNewRecordModal: function(component, event) {
         component.set('v.showNewRecordModal', true);
     },
-    handleSuccess: function(component, event) {
-        component.set('v.showNewRecordModal', false);
-        component.find('notifLib').showToast({
-            "variant": "success",
-            "title": "Account Created",
-            "message": "Record ID: " + event.getParam("id")
-        });
+    handleSuccess: function(component, event, helper) {
+        helper.handleSuccess(component, event);
     },
     closeModal: function(component, event) {
         component.set('v.showNewRecordModal', false);
-    },
+    }
 
 })

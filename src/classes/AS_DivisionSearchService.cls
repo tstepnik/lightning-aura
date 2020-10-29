@@ -1,9 +1,4 @@
-/**
- * Created by BRITENET on 23.10.2020.
- */
-
 public with sharing class AS_DivisionSearchService {
-
 
     public static String queryGenerator(Map<String, String> parameters) {
         String query = 'SELECT Id,Name,BillingCountry, Rating, BillingCity, BillingStreet, Active__c FROM Account WHERE RecordType.Name = \'Division\'';
@@ -53,5 +48,4 @@ public with sharing class AS_DivisionSearchService {
         }
         return wrappers;
     }
-
 }

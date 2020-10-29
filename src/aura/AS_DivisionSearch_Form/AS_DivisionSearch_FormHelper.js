@@ -8,13 +8,15 @@
             rating: component.get('v.rating'),
             city: component.get('v.city'),
             active: component.get('v.active'),
-           });
+        });
 
         action.setCallback(this, function(response) {
             const status = response.getState();
             if (status === 'SUCCESS') {
                 let event = $A.get('e.c:AS_DivisionSearch_SearchEvent');
-                event.setParams({"param": response.getReturnValue()});
+                event.setParams({
+                    "param": response.getReturnValue()
+                });
 
 
                 event.fire();

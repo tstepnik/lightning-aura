@@ -1,11 +1,11 @@
 ({
     doInit: function(component, helper) {
         component.set('v.isRecordEdited', false);
-                       component.set('v.isRecordClicked', false);
-                       component.set('v.wrapperIsNotNull', true);
+        component.set('v.isRecordClicked', false);
+        component.set('v.wrapperIsNotNull', true);
     },
     handler: function(component, event, helper) {
-      helper.handler(component,event);
+        helper.handler(component, event);
     },
     showEditForm: function(component, event, helper) {
         component.set('v.isRecordEdited', true);
@@ -15,8 +15,8 @@
 
     },
 
-    saveEdit: function(component,event,helper){
-  helper.saveEdit(component,event);
+    saveEdit: function(component, event, helper) {
+        helper.saveEdit(component, event);
     },
 
     handleConfirmDialog: function(component, event, helper) {
@@ -25,9 +25,7 @@
 
     handleConfirmDialogYes: function(component, event, helper) {
         helper.removeItem(component);
-        component.set('v.showConfirmDialog', false);
-         component.set('v.wrapper.recordId',null);
-         component.set('v.wrapperIsNotNull',false);
+
 
     },
 

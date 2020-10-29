@@ -12,10 +12,10 @@ public with sharing class AS_DivisionSearch_DetailsController {
             Database.DeleteResult result = Database.delete(account);
             return 'Success';
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.debug(e.getMessage());
             return e.getMessage();
         }
-        }
+    }
 
 }
