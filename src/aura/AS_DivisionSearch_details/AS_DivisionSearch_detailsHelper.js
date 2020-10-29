@@ -46,9 +46,13 @@
     },
     refreshTable: function(component) {
         let event = $A.get('e.c:AS_DivisionSearch_RefreshTableEvent');
-        //     event.fire();
+             event.fire();
 
         console.log('FIRE EVENT DZIALA');
+    },
+    editItem: function(component){
+
     }
+
 
 })

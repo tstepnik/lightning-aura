@@ -15,9 +15,19 @@
             }
         });
         component.set('v.accountWrappers',newData);
-        console.log("LISTA SIE USTAWILA");
-        console.log("NOWA LISTA");
-        console.log(newData);
-        console.log(recordId);
+
     }
+//    handleEditEvent: function(component,event){
+//
+//        let eventWrapper = event.getParam('record');
+//
+//                let oldData = component.get('v.data');
+//                oldData.forEach((element) =>{
+//                    if( element.Id === eventWrapper.Id){
+//
+//                        element = eventWrapper;
+//                    }
+//                });
+//                component.set('v.data',oldData);
+//    }
 });

@@ -5,8 +5,6 @@
         component.set('v.wrapperIsNotNull', true);
     },
     handler: function(cmp, event, helper) {
-        console.log('account wrapper');
-        console.log(event.getParam('accountWrapper'));
         let id = event.getParam('accountWrapper');
         cmp.set('v.wrapper', id);
         cmp.set('v.accountIdd',id.recordId);
@@ -18,15 +16,14 @@
     },
     hideEditForm: function(cmp, event, helper) {
         cmp.set('v.isRecordEdited', false);
+
     },
 
     saveEdit: function(cmp,event,helper){
         console.log('WCHODZI DO SAVE EDIT');
         let hideEditFormAction = cmp.get('c.hideEditForm');
         $A.enqueueAction(hideEditFormAction);
-        console.log('WCHODZI DO REFRESH TABLE');
         helper.refreshTable(cmp);
-        console.log('WYCHODZI Z SAVE EDIT');
 
     },
 
@@ -40,7 +37,6 @@
          component.set('v.wrapper.recordId',null);
          component.set('v.wrapperIsNotNull',false);
 
-                helper.refreshTable(component);
     },
 
     handleConfirmDialogNo: function(component, event, helper) {

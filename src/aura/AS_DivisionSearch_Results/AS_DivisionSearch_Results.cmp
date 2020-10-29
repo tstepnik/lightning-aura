@@ -12,6 +12,7 @@
     <!-- handlers-->
     <aura:handler event="c:AS_DivisionSearch_SearchEvent" action="{!c.handleEvent}"/>
     <aura:handler event="c:AS_DivisionSearch_DeleteRecordEvent" action="{!c.handleDeleteEvent}"/>
+<!--    <aura:handler event="c:AS_DivisionSearch_EditRecordEvent" action="{!c.handleEditEvent}"/>-->
 
     <aura:registerEvent name="accountSelectEvent" type="c:AS_DivisionSearch_SelectAccountEvent"/>
 

@@ -12,7 +12,7 @@
     <aura:registerEvent name="accountSelectEvent" type="c:AS_DivisionSearch_RefreshTableEvent" />
 
     <aura:registerEvent name="deleteRecordEvent" type="c:AS_DivisionSearch_DeleteRecordEvent" />
-    <aura:registerEvent name="editRecordEvent" type="c:AS_DivisionSearch_EditRecordEvent" />
+<!--    <aura:registerEvent name="editRecordEvent" type="c:AS_DivisionSearch_EditRecordEvent" />-->
     <lightning:notificationsLibrary aura:id="notification"/>
 
 
@@ -90,18 +90,19 @@
 
 
                     <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
-                        <lightning:inputField fieldName="Name"/>
-                        <lightning:inputField fieldName="BillingCountry"/>
-                        <lightning:inputField fieldName="BillingCity"/>
-                        <lightning:inputField fieldName="BillingStreet"/>
-                        <lightning:inputField fieldName="RecordTypeId"/>
+                        <lightning:inputField fieldName="Name" aura:id="wrapperName" value="{!v.wrapper.name}"/>
+                        <lightning:inputField fieldName="BillingCountry" aura:id="wrapperCountry" value="{!v.wrapper.country}"/>
+                        <lightning:inputField fieldName="BillingCity" aura:id="wrapperCity" value="{!v.wrapper.city}"/>
+                        <lightning:inputField fieldName="BillingStreet" aura:id="wrapperStreet"/>
+                        <lightning:inputField fieldName="RecordTypeId" aura:id="wrapperRecordTypeId"/>
                     </lightning:layoutItem>
                     <lightning:layoutItem size="6" class="slds-p-horizontal_medium slds-p-vertical_medium">
-                        <lightning:inputField fieldName="OwnerId"/>
-                        <lightning:inputField fieldName="NumberOfEmployees"/>
-                        <lightning:inputField fieldName="Phone"/>
-                        <lightning:inputField fieldName="Rating"/>
-                        <lightning:inputField fieldName="Industry"/>
+                        <lightning:inputField fieldName="OwnerId" aura:id="wrapperOwnerId"/>
+                        <lightning:inputField fieldName="NumberOfEmployees" aura:id="wrapperNumberOfEmployees"/>
+                        <lightning:inputField fieldName="Phone" aura:id="wrapperPhone"/>
+                        <lightning:inputField fieldName="Rating" aura:id="wrapperRating" value="{!v.wrapper.rating}"/>
+                        <lightning:inputField fieldName="Industry" aura:id="wrapperIndustry"/>
+                        <lightning:inputField fieldName="Active__c" aura:id="wrapperActive" value="{!v.wrapper.active}"/>
                     </lightning:layoutItem>
                     <lightning:button class="slds-m-top_small" variant="brand" label="Save" type="submit" name="Save"/>
                     <lightning:button class="slds-m-top_small" variant="neutral" label="Cancel"
