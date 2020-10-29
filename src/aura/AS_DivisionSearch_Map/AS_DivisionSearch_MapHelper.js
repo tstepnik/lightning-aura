@@ -1,5 +1,5 @@
 ({
-handleEvent: function(cmp, event) {
+handleEvent: function(component, event) {
         let listOfPointers = [];
         let iter = 0;
         let data = event.getParam('param');
@@ -13,6 +13,6 @@ handleEvent: function(cmp, event) {
                 description: element.name
             };
         });
-        cmp.set('v.mapMarkers', listOfPointers);
+        component.set('v.mapMarkers', listOfPointers);
     }
 })

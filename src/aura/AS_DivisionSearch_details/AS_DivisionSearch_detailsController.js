@@ -4,26 +4,26 @@
         component.set('v.isRecordClicked', false);
         component.set('v.wrapperIsNotNull', true);
     },
-    handler: function(cmp, event, helper) {
+    handler: function(component, event, helper) {
         let id = event.getParam('accountWrapper');
-        cmp.set('v.wrapper', id);
-        cmp.set('v.accountIdd',id.recordId);
-        cmp.set('v.isRecordClicked', true);
-        cmp.set('v.wrapperIsNotNull', true);
+        component.set('v.wrapper', id);
+        component.set('v.accountIdd',id.recordId);
+        component.set('v.isRecordClicked', true);
+        component.set('v.wrapperIsNotNull', true);
     },
-    showEditForm: function(cmp, event, helper) {
-        cmp.set('v.isRecordEdited', true);
+    showEditForm: function(component, event, helper) {
+        component.set('v.isRecordEdited', true);
     },
-    hideEditForm: function(cmp, event, helper) {
-        cmp.set('v.isRecordEdited', false);
+    hideEditForm: function(component, event, helper) {
+        component.set('v.isRecordEdited', false);
 
     },
 
-    saveEdit: function(cmp,event,helper){
-        let hideEditFormAction = cmp.get('c.hideEditForm');
+    saveEdit: function(component,event,helper){
+        let hideEditFormAction = component.get('c.hideEditForm');
         $A.enqueueAction(hideEditFormAction);
-        helper.refreshTable(cmp);
-             cmp.find('notification').showToast({
+        helper.refreshTable(component);
+             component.find('notification').showToast({
                                 "title": 'Success',
                                 "variant": 'success',
                                 "message": 'Account successfully updated'

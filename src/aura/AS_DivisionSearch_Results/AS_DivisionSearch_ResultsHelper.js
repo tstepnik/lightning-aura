@@ -1,7 +1,7 @@
 ({
-    handleEvent: function(cmp, event) {
+    handleEvent: function(component, event) {
         let accountWrappers = event.getParam('param');
-        cmp.set('v.accountWrappers',accountWrappers);
+        component.set('v.accountWrappers',accountWrappers);
     },
     handleDeleteEvent: function(component,event){
 
