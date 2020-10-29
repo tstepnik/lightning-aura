@@ -20,7 +20,7 @@
 
 
                 event.fire();
-                this.handleShowToast(component, event, 'Success', 'success', 'Success operation');
+
             } else {
                 this.handleShowToast(component, event, 'Error', 'error', 'Error while processing loading data');
                 let errors = response.getError();

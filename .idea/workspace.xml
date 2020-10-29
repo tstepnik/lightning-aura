@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_FormController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_FormController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Header/AS_DivisionSearch_Header.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Header/AS_DivisionSearch_Header.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_RefreshTableEvent/AS_DivisionSearch_RefreshTableEvent.evt" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_RefreshTableEvent/AS_DivisionSearch_RefreshTableEvent.evt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Results/AS_DivisionSearch_ResultsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_details.cmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_details/AS_DivisionSearch_detailsHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_FormHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aura/AS_DivisionSearch_Form/AS_DivisionSearch_FormHelper.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
