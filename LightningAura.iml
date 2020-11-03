@@ -284,6 +284,14 @@
                             <option name="name" value="AS_DivisionSearch_DetailsController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AS_WebToLeadController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AS_WebToLeadWrapper" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -395,6 +403,7 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MH_RandomDoctors" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="MyProfilePage" />
@@ -419,6 +428,10 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="UnderConstruction" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="WebToLead" />
+                            <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>
                       </option>

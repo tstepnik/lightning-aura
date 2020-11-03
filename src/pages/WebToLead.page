@@ -1,0 +1,387 @@
+<apex:page id="WebToLead" controller="AS_WebToLeadController" sideBar="false" showHeader="false">
+    <script src="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+apex-selectOptions,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: #37af65;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.main-title {
+    font-size: 2rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+    </style>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center, main-title">Athletic Stufff</h1>
+            <p id="description" class="description text-center">
+                Thank you for taking the time to help us know you better
+            </p>
+        </header>
+        <apex:form id="survey-form">
+            <apex:pageMessages id="apexErrors"/>
+            <div class="form-group">
+                <label id="name-label" for="firstName">First Name</label>
+                <apex:inputText
+                        id="firstName"
+                        styleClass="form-control"
+                        value="{!firstName}"
+
+                />
+            </div>
+            <div class="form-group">
+                <label id="lastName-label" for="lastName">Last Name</label>
+                <apex:inputText
+                        id="lastName"
+                        styleClass="form-control"
+                        value="{!lastName}"
+
+                />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <apex:inputText
+                        id="email"
+                        styleClass="form-control"
+                        value="{!email}"
+
+                />
+            </div>
+            <div class="form-group">
+                <label id="company-label" for="company">Company</label>
+                <apex:inputText
+                        id="company"
+                        styleClass="form-control"
+                        value="{!company}"
+
+                />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number"
+                >Phone
+                    <span class="clue">(optional)</span>
+                </label
+                >
+                <apex:inputText
+                        id="number"
+                        styleClass="form-control"
+                        value="{!phone}"
+
+                />
+            </div>
+            <div class="form-group">
+                <p>Which option best describes your company industry?</p>
+                <apex:selectList styleClass="form-control" value="{!industry}"
+                                 size="1">
+                    <apex:selectOptions value="{!industries2}"/>
+                </apex:selectList>
+<!--                <select id="dropdown" name="role" class="form-control">-->
+<!--                    <option></option>-->
+<!--                </select>-->
+
+            </div>
+            <div class="form-group">
+                <p>How did you know about us ?</p>
+                <label>
+                    <input
+                            name="lead-source"
+                            value="Web"
+                            type="radio"
+                            class="input-radio"
+
+                    />Web
+                </label
+                >
+                <label>
+                    <input
+                            name="lead-source"
+                            value="Phone Inquiry"
+                            type="radio"
+                            class="input-radio"
+                    />Phone Inquiry
+                </label
+                >
+                <label
+                >
+                    <input
+                            name="lead-source"
+                            value="Partner Referral"
+                            type="radio"
+                            class="input-radio"
+                    />Partner Referral
+                </label
+                >
+                <label
+                >
+                    <input
+                            name="lead-source"
+                            value="Purchased List"
+                            type="radio"
+                            class="input-radio"
+                    />Purchased List
+                </label
+                >
+                <label
+                >
+                    <input
+                            name="lead-source"
+                            value="Other"
+                            type="radio"
+                            class="input-radio"
+                    />Other
+                </label
+                >
+            </div>
+            <div class="form-group">
+                <apex:commandButton id="submit" styleClass="submit-button" value="Submit" onClick="sendForm()"
+                                    onComplete="debugData();" reRender="survey-form">
+
+                </apex:commandButton>
+            </div>
+            <apex:actionFunction name="setLeadIndustry">
+                <apex:param value="" name="leadIndustry"/>
+            </apex:actionFunction>
+            <apex:actionFunction name="debugData" action="{!debugData}" reRender="survey-form"/>
+            <apex:actionFunction name="setData" action="{!leadIndustryPicListValues}" reRender="survey-form"/>
+<!--            <apex:inputHidden value="{!industry}" id="a_id"/>-->
+            <apex:inputHidden value="{!leadSource}" id="b_id"/>
+        </apex:form>
+
+    </div>
+
+    <script>
+
+//fillSelectOptions();
+<!--function fillSelectOptions(){-->
+<!--        let industries = '{!industries}';-->
+<!--    industries = industries.replace('[', '');-->
+<!--    industries = industries.replace("]", "");-->
+<!--    industries = industries.split(",");-->
+<!--    let select = document.getElementById('dropdown');-->
+<!--    for (let i = 0; i < industries.length; i++) {-->
+<!--        let opt = document.createElement('option');-->
+<!--        opt.value = industries[i];-->
+<!--        opt.innerHTML = industries[i];-->
+<!--        select.appendChild(opt);-->
+<!--    }-->
+<!--}-->
+
+//    let sel = document.getElementById('dropdown');
+let radios = document.getElementsByName('lead-source');
+
+function getSelectedOption(sel) {
+    var opt;
+    for (var i = 0, len = sel.options.length; i < len; i++) {
+        opt = sel.options[i];
+        if (opt.selected === true) {
+            break;
+        }
+    }
+    return opt;
+}
+
+function sendForm() {
+//    let opt = getSelectedOption(sel);
+//    let industry = opt.value.replace(" ", "");
+//    $("[id$='a_id']").val(industry);
+    let chosenRadioButton = getSelectedRadioButton(radios);
+    $("[id$='b_id']").val(chosenRadioButton);
+    setData();
+    return false;
+}
+
+function getSelectedRadioButton(radios) {
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+            // do whatever you want with the checked radio
+            return radios[i].value;
+
+            // only one radio can be logically checked, don't check the rest
+            break;
+        }
+    }
+}
+    </script>
+</apex:page>
