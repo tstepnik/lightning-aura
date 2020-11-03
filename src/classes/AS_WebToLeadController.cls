@@ -7,11 +7,10 @@ public with sharing class AS_WebToLeadController {
     public String phone { get; set; }
     public String industry { get; set; }
     public String leadSource { get; set; }
-    public List<String> industries { get; set; }
-    public List<SelectOption> industries2 { get; set; }
+    public List<SelectOption> industries { get; set; }
 
     public AS_WebToLeadController() {
-        industries2 = new List<SelectOption>();
+        industries = new List<SelectOption>();
         leadIndustryPicListValues();
     }
 
@@ -25,47 +24,38 @@ public with sharing class AS_WebToLeadController {
                 industry,
                 leadSource
         );
-        wrapper.createLead();
-
-
+        try {
+            wrapper.createLead();
+            clearData();
+        }catch (Exception e){
+            ApexPages.addMessage(new ApexPages.message(Apexpages.Severity.ERROR, e.getMessage()));
+            System.debug(e);
+        }
     }
-
-
-    public void debugData() {
-//        industry = system.currentpagereference().getParameters().get('leadIndustry');
-        System.debug('///////////////////');
-        System.debug(firstName);
-        System.debug(lastName);
-        System.debug(email);
-        System.debug(company);
-        System.debug(phone);
-        System.debug(industry);
-        System.debug(leadSource);
-        System.debug('///////////////////');
-        createLead();
-        System.debug(industries);
-    }
-
 
     public void leadIndustryPicListValues() {
-        List <String> allOpts = new list < String > ();
         Schema.sObjectType objType = Lead.getSObjectType();
         Schema.DescribeSObjectResult objDescribe = objType.getDescribe();
 
         map < String, Schema.SObjectField > fieldMap = objDescribe.fields.getMap();
 
-
         list < Schema.PicklistEntry > values =
                 fieldMap.get('Industry').getDescribe().getPickListValues();
 
+        industries.add(new SelectOption('', ''));
         for (Schema.PicklistEntry a : values) {
-            allOpts.add(a.getValue());
+            String option = a.getValue();
+            industries.add(new SelectOption(option, option));
         }
-        for (String option : allOpts) {
-            String indu = option;
-            industries2.add(new SelectOption(indu, indu));
-        }
-        System.debug(industries2);
-        industries = allOpts;
+    }
+
+    public void clearData() {
+        firstName = '';
+        lastName = '';
+        email = '';
+        company = '';
+        phone = '';
+        industry = '';
+        leadSource = '';
     }
 }

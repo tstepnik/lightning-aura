@@ -1,7 +1,3 @@
-/**
- * Created by BRITENET on 03.11.2020.
- */
-
 public with sharing class AS_WebToLeadWrapper {
 
     public String firstName { get; set; }
@@ -22,7 +18,7 @@ public with sharing class AS_WebToLeadWrapper {
         this.leadSource = leadSource;
     }
 
-    public void createLead(){
+    public void createLead() {
         Lead lead = new Lead(
                 FirstName = firstName,
                 LastName = lastName,
@@ -30,12 +26,14 @@ public with sharing class AS_WebToLeadWrapper {
                 Company = company,
                 Phone = phone,
                 Industry = industry,
-                LeadSource = leadSource
+                LeadSource = 'Survey',
+                Source_Recommendation__c = leadSource
         );
-        try{
+        try {
             insert lead;
-        }catch (Exception e){
-            ApexPages.addMessage(new ApexPages.message(Apexpages.Severity.ERROR, e.getMessage()));
+        } catch (Exception e) {
+            System.debug(e.getMessage());
+            throw e;
         }
     }
 }

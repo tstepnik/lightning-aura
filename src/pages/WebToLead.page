@@ -1,8 +1,32 @@
 <apex:page id="WebToLead" controller="AS_WebToLeadController" sideBar="false" showHeader="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
     <script src="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <apex:includeScript
+            value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/external/jquery/jquery.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.css')}"/>
     <style>
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #1E90FF;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
 
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
 
 :root {
   --color-white: #f3f3f3;
@@ -26,7 +50,6 @@ body {
   margin: 0;
 }
 
-/* mobile friendly alternative to using background-attachment: fixed */
 body::before {
   content: '';
   position: fixed;
@@ -187,13 +210,11 @@ form {
 
 .main-title {
     font-size: 2rem;
-margin-left: auto;
-margin-right: auto;
+margin-left: 15rem;
 }
-
-
     </style>
     <div class="container">
+        <div id="snackbar">Survey send successfully. Thank you.</div>
         <header class="header">
             <h1 id="title" class="text-center, main-title">Athletic Stufff</h1>
             <p id="description" class="description text-center">
@@ -201,7 +222,9 @@ margin-right: auto;
             </p>
         </header>
         <apex:form id="survey-form">
+            <div id="error-messages">
             <apex:pageMessages id="apexErrors"/>
+            </div>
             <div class="form-group">
                 <label id="name-label" for="firstName">First Name</label>
                 <apex:inputText
@@ -255,11 +278,8 @@ margin-right: auto;
                 <p>Which option best describes your company industry?</p>
                 <apex:selectList styleClass="form-control" value="{!industry}"
                                  size="1">
-                    <apex:selectOptions value="{!industries2}"/>
+                    <apex:selectOptions value="{!industries}"/>
                 </apex:selectList>
-<!--                <select id="dropdown" name="role" class="form-control">-->
-<!--                    <option></option>-->
-<!--                </select>-->
 
             </div>
             <div class="form-group">
@@ -267,40 +287,30 @@ margin-right: auto;
                 <label>
                     <input
                             name="lead-source"
-                            value="Web"
+                            value="Friends"
                             type="radio"
                             class="input-radio"
 
-                    />Web
+                    />Friends
                 </label
                 >
                 <label>
                     <input
                             name="lead-source"
-                            value="Phone Inquiry"
+                            value="Internet"
                             type="radio"
                             class="input-radio"
-                    />Phone Inquiry
+                    />Internet
                 </label
                 >
                 <label
                 >
                     <input
                             name="lead-source"
-                            value="Partner Referral"
+                            value="Social Media"
                             type="radio"
                             class="input-radio"
-                    />Partner Referral
-                </label
-                >
-                <label
-                >
-                    <input
-                            name="lead-source"
-                            value="Purchased List"
-                            type="radio"
-                            class="input-radio"
-                    />Purchased List
+                    />Social Media
                 </label
                 >
                 <label
@@ -316,72 +326,68 @@ margin-right: auto;
             </div>
             <div class="form-group">
                 <apex:commandButton id="submit" styleClass="submit-button" value="Submit" onClick="sendForm()"
-                                    onComplete="debugData();" reRender="survey-form">
+                                    onComplete="createLead();" reRender="survey-form">
 
                 </apex:commandButton>
             </div>
             <apex:actionFunction name="setLeadIndustry">
                 <apex:param value="" name="leadIndustry"/>
             </apex:actionFunction>
-            <apex:actionFunction name="debugData" action="{!debugData}" reRender="survey-form"/>
+            <apex:actionFunction name="createLead" action="{!createLead}" reRender="survey-form" onComplete="showToastIfSuccess()"/>
             <apex:actionFunction name="setData" action="{!leadIndustryPicListValues}" reRender="survey-form"/>
-<!--            <apex:inputHidden value="{!industry}" id="a_id"/>-->
+
             <apex:inputHidden value="{!leadSource}" id="b_id"/>
         </apex:form>
 
     </div>
 
     <script>
+    j$ = jQuery.noConflict();
+    let radios = document.getElementsByName('lead-source');
 
-//fillSelectOptions();
-<!--function fillSelectOptions(){-->
-<!--        let industries = '{!industries}';-->
-<!--    industries = industries.replace('[', '');-->
-<!--    industries = industries.replace("]", "");-->
-<!--    industries = industries.split(",");-->
-<!--    let select = document.getElementById('dropdown');-->
-<!--    for (let i = 0; i < industries.length; i++) {-->
-<!--        let opt = document.createElement('option');-->
-<!--        opt.value = industries[i];-->
-<!--        opt.innerHTML = industries[i];-->
-<!--        select.appendChild(opt);-->
-<!--    }-->
-<!--}-->
 
-//    let sel = document.getElementById('dropdown');
-let radios = document.getElementsByName('lead-source');
+    function getSelectedOption(sel) {
+        var opt;
+        for (var i = 0, len = sel.options.length; i < len; i++) {
+            opt = sel.options[i];
+            if (opt.selected === true) {
+                break;
+            }
+        }
+        return opt;
+    }
 
-function getSelectedOption(sel) {
-    var opt;
-    for (var i = 0, len = sel.options.length; i < len; i++) {
-        opt = sel.options[i];
-        if (opt.selected === true) {
-            break;
+    function showToastIfSuccess(){
+        setTimeout(function() {},1000);
+         const errorMessages = document.getElementById('error-messages').innerText;
+          if(!errorMessages.includes('Error:')){
+        showToast();
+          }
+    }
+
+    function sendForm() {
+        let chosenRadioButton = getSelectedRadioButton(radios);
+         setData();
+        j$("[id$='b_id']").val(chosenRadioButton);
+        return false;
+    }
+
+    function getSelectedRadioButton(radios) {
+        for (var i = 0, length = radios.length; i < length; i++) {
+            if (radios[i].checked) {
+                return radios[i].value;
+                break;
+            }
         }
     }
-    return opt;
-}
 
-function sendForm() {
-//    let opt = getSelectedOption(sel);
-//    let industry = opt.value.replace(" ", "");
-//    $("[id$='a_id']").val(industry);
-    let chosenRadioButton = getSelectedRadioButton(radios);
-    $("[id$='b_id']").val(chosenRadioButton);
-    setData();
-    return false;
-}
-
-function getSelectedRadioButton(radios) {
-    for (var i = 0, length = radios.length; i < length; i++) {
-        if (radios[i].checked) {
-            // do whatever you want with the checked radio
-            return radios[i].value;
-
-            // only one radio can be logically checked, don't check the rest
-            break;
-        }
+    function showToast() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+        }, 3000);
     }
-}
     </script>
+    </html>
 </apex:page>
