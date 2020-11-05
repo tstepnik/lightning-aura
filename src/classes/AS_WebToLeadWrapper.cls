@@ -26,7 +26,7 @@ public with sharing class AS_WebToLeadWrapper {
                 Company = company,
                 Phone = phone,
                 Industry = industry,
-                LeadSource = 'Survey',
+                LeadSource = 'Web',
                 Source_Recommendation__c = leadSource
         );
         try {

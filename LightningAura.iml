@@ -296,6 +296,14 @@
                             <option name="name" value="AS_PostToChatter" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyAndQuestionController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewSurveyController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                         </list>
                       </option>
                       <option name="name" value="ApexClass" />
@@ -435,6 +443,18 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="WebToLead" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyManagerPage" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyPage" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="TakeSurvey" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

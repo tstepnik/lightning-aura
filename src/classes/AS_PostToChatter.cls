@@ -23,6 +23,10 @@ public with sharing class AS_PostToChatter {
     }
 
     private static String setPostBody(Lead leadToChatter) {
+        if (leadToChatter.LeadSource == 'Web'){
+            System.debug('Wchodzi do ifa');
+            return  ' created new lead from web survey: ' + leadToChatter.Name;
+        }
         return leadToChatter.CreatedBy.Name + ' created new lead: ' + leadToChatter.Name;
     }
 
