@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb38b452-8892-4cee-8b4e-992201c75e08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LightningAura.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LightningAura.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/AS_PostToChatter.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/AS_PostToChatter.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/AS_WebToLeadController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/AS_WebToLeadController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/AS_WebToLeadWrapper.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/AS_WebToLeadWrapper.cls-meta.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/SurveyAndQuestionController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/SurveyAndQuestionController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ViewSurveyController.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/ViewSurveyController.cls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/WebToLead.page" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/WebToLead.page" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +45,7 @@
           <AnonymousApexSettings>
             <option name="apexLogLevel" value="FINEST" />
             <option name="calloutsLogLevel" value="ERROR" />
+            <option name="connectionName" value="VisualForce" />
             <option name="documentText" value="List &lt; String &gt; allOpts = new list &lt; String &gt; ();&#10;Schema.sObjectType objType = Lead.getSObjectType();&#10;Schema.DescribeSObjectResult objDescribe = objType.getDescribe();&#10;&#10;System.debug('OBJ DESCRIBE: ');&#10;System.debug(objDescribe);&#10;&#10;map &lt; String, Schema.SObjectField &gt; fieldMap = objDescribe.fields.getMap();&#10;&#10;&#10;list &lt; Schema.PicklistEntry &gt; values =&#10;        fieldMap.get('Industry').getDescribe().getPickListValues();&#10;&#10;System.debug(values);&#10;//&#10;//// Add these values to the selectoption list.&#10;for (Schema.PicklistEntry a : values) {&#10;    System.debug(a.getValue() + ' ' + a.getLabel());&#10;}&#10;//system.debug('allOpts ----&gt;' + allOpts);&#10;//allOpts.sort();" />
             <option name="profilingLogLevel" value="ERROR" />
             <option name="splitterProportion" value="0.5081967" />
@@ -100,7 +93,7 @@
                       <entry key="PAGES/SURVEYMANAGERPAGE.PAGE" value="1604406630000" />
                       <entry key="PAGES/SURVEYPAGE.PAGE" value="1604406630000" />
                       <entry key="PAGES/TAKESURVEY.PAGE" value="1604593323271" />
-                      <entry key="PAGES/WEBTOLEAD.PAGE" value="1604651277005" />
+                      <entry key="PAGES/WEBTOLEAD.PAGE" value="1604651288013" />
                     </map>
                   </option>
                   <option name="lastBuildScope" value="CONTEXT" />
