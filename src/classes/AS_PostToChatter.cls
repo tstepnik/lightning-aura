@@ -2,7 +2,7 @@
  * Created by BRITENET on 03.11.2020.
  */
 
-public with sharing class AS_PostToChatter {
+public without sharing class AS_PostToChatter {
     private static final String COLLABORATION_GROUP = 'Sales Department';
     @InvocableMethod
     public static void createNewPost(List<String> leadIds) {

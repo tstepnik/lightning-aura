@@ -1,11 +1,12 @@
-<apex:page id="WebToLead" controller="AS_WebToLeadController" sideBar="false" showHeader="false">
+<apex:page id="WebToLead" sideBar="false" showHeader="false" controller="AS_WebToLeadController">
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
-    <script src="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"/>
-    <apex:includeScript
-            value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/external/jquery/jquery.js')}"/>
-    <apex:includeScript value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.js')}"/>
-    <apex:stylesheet value="{!URLFOR($Resource.JQuery_UI,'jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.css')}"/>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8"/>
     <style>
+
+    iframe-div{
+        width: 100%;
+        height: 100%;
+    }
 #snackbar {
   visibility: hidden;
   min-width: 250px;
@@ -203,8 +204,11 @@ form {
   width: 100%;
   padding: 0.75rem;
   background: var(--color-green);
-  color: #37af65;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 2px;
+
   cursor: pointer;
 }
 
@@ -212,8 +216,29 @@ form {
     font-size: 2rem;
 margin-left: 15rem;
 }
+
+#main-survey-form {
+
+}
+
+.hide-form{
+     display: none;
+}
+#merci-div{
+    margin-top: 18rem;
+text-align: center;
+font-size: 5rem;
+font-weight: bold;
+}
+
+
+
     </style>
-    <div class="container">
+
+    <body>
+
+    <div class="container" id="main-survey-form">
+
         <div id="snackbar">Survey send successfully. Thank you.</div>
         <header class="header">
             <h1 id="title" class="text-center, main-title">Athletic Stufff</h1>
@@ -221,173 +246,80 @@ margin-left: 15rem;
                 Thank you for taking the time to help us know you better
             </p>
         </header>
-        <apex:form id="survey-form">
-            <div id="error-messages">
-            <apex:pageMessages id="apexErrors"/>
-            </div>
-            <div class="form-group">
-                <label id="name-label" for="firstName">First Name</label>
-                <apex:inputText
-                        id="firstName"
-                        styleClass="form-control"
-                        value="{!firstName}"
+        <div id="merci-div">
+            <h1>Thank You</h1>
+        </div>
+        <div id="survey" class="iframe-div">
+            <iframe id="iframe"
+                    frameborder="0"
+                    border="0"
+                    cellspacing="0"
+                    style="
+                    border-style: none;
+                    width: 100%;
+                     height: 15rem;
+                     padding: 0;
+"
+            />
+        </div>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="form">
 
-                />
-            </div>
-            <div class="form-group">
-                <label id="lastName-label" for="lastName">Last Name</label>
-                <apex:inputText
-                        id="lastName"
-                        styleClass="form-control"
-                        value="{!lastName}"
+            <input type="hidden" name="oid" value="00D2X000003Gu1M"/>
+            <input type="hidden" name="retURL" value="{!siteURL + '?merci'}"/>
 
-                />
-            </div>
-            <div class="form-group">
-                <label id="email-label" for="email">Email</label>
-                <apex:inputText
-                        id="email"
-                        styleClass="form-control"
-                        value="{!email}"
 
-                />
-            </div>
-            <div class="form-group">
-                <label id="company-label" for="company">Company</label>
-                <apex:inputText
-                        id="company"
-                        styleClass="form-control"
-                        value="{!company}"
+            <label for="first_name">First Name</label><input class="form-control" id="first_name" maxlength="40"
+                                                             name="first_name" size="20"
+                                                             type="text"/><br/>
 
-                />
-            </div>
-            <div class="form-group">
-                <label id="number-label" for="number"
-                >Phone
-                    <span class="clue">(optional)</span>
-                </label
-                >
-                <apex:inputText
-                        id="number"
-                        styleClass="form-control"
-                        value="{!phone}"
+            <label for="last_name">Last Name</label><input class="form-control" id="last_name" maxlength="80"
+                                                           name="last_name" size="20"
+                                                           type="text"/><br/>
 
-                />
-            </div>
-            <div class="form-group">
-                <p>Which option best describes your company industry?</p>
-                <apex:selectList styleClass="form-control" value="{!industry}"
-                                 size="1">
-                    <apex:selectOptions value="{!industries}"/>
-                </apex:selectList>
+            <label for="email">Email</label><input class="form-control" id="email" maxlength="80" name="email" size="20"
+                                                   type="text"/><br/>
 
-            </div>
-            <div class="form-group">
-                <p>How did you know about us ?</p>
-                <label>
-                    <input
-                            name="lead-source"
-                            value="Friends"
-                            type="radio"
-                            class="input-radio"
+            <label for="company">Company</label><input class="form-control" id="company" maxlength="40" name="company"
+                                                       size="20"
+                                                       type="text"/><br/>
 
-                    />Friends
-                </label
-                >
-                <label>
-                    <input
-                            name="lead-source"
-                            value="Internet"
-                            type="radio"
-                            class="input-radio"
-                    />Internet
-                </label
-                >
-                <label
-                >
-                    <input
-                            name="lead-source"
-                            value="Social Media"
-                            type="radio"
-                            class="input-radio"
-                    />Social Media
-                </label
-                >
-                <label
-                >
-                    <input
-                            name="lead-source"
-                            value="Other"
-                            type="radio"
-                            class="input-radio"
-                    />Other
-                </label
-                >
-            </div>
-            <div class="form-group">
-                <apex:commandButton id="submit" styleClass="submit-button" value="Submit" onClick="sendForm()"
-                                    onComplete="createLead();" reRender="survey-form">
+            <label for="city">City</label><input class="form-control" id="city" maxlength="40" name="city" size="20"
+                                                 type="text"/><br/>
 
-                </apex:commandButton>
-            </div>
-            <apex:actionFunction name="setLeadIndustry">
-                <apex:param value="" name="leadIndustry"/>
-            </apex:actionFunction>
-            <apex:actionFunction name="createLead" action="{!createLead}" reRender="survey-form" onComplete="showToastIfSuccess()"/>
-            <apex:actionFunction name="setData" action="{!leadIndustryPicListValues}" reRender="survey-form"/>
+            <label for="state">State/Province</label><input class="form-control" id="state" maxlength="20" name="state"
+                                                            size="20"
+                                                            type="text"/><br/>
 
-            <apex:inputHidden value="{!leadSource}" id="b_id"/>
-        </apex:form>
+            <input type="submit" class="submit-button" name="submit" onClick="showGreetings()"/>
+
+        </form>
 
     </div>
-
+    </body>
     <script>
-    j$ = jQuery.noConflict();
-    let radios = document.getElementsByName('lead-source');
 
+    let lid = '{!$CurrentPage.parameters.lid}';
+    const x = document.getElementById("form");
+    const y = document.getElementById("survey");
+    const merciDiv = document.getElementById("merci-div")
+    let url = window.location.href;
+    merciDiv.style.display = "none";
 
-    function getSelectedOption(sel) {
-        var opt;
-        for (var i = 0, len = sel.options.length; i < len; i++) {
-            opt = sel.options[i];
-            if (opt.selected === true) {
-                break;
-            }
-        }
-        return opt;
+    if (url.indexOf("?merci") !== -1) {
+        x.style.display = "none";
+        y.style.display = "none";
+        merciDiv.style.display = "block";
+    } else if (lid && lid !== '' && lid.length > 0) {
+
+        let iframe = document.getElementById('iframe');
+        iframe.src = 'https://5-random-doctors-developer-edition.eu45.force.com/TakeSurvey?id=a0H7R00000xGBXhUAO&lid=' + lid;
+        x.style.display = "none";
+        y.style.display = "block";
+    } else {
+        x.style.display = "block";
+        y.style.display = "none";
     }
 
-    function showToastIfSuccess(){
-        setTimeout(function() {},1000);
-         const errorMessages = document.getElementById('error-messages').innerText;
-          if(!errorMessages.includes('Error:')){
-        showToast();
-          }
-    }
-
-    function sendForm() {
-        let chosenRadioButton = getSelectedRadioButton(radios);
-         setData();
-        j$("[id$='b_id']").val(chosenRadioButton);
-        return false;
-    }
-
-    function getSelectedRadioButton(radios) {
-        for (var i = 0, length = radios.length; i < length; i++) {
-            if (radios[i].checked) {
-                return radios[i].value;
-                break;
-            }
-        }
-    }
-
-    function showToast() {
-        var x = document.getElementById("snackbar");
-        x.className = "show";
-        setTimeout(function() {
-            x.className = x.className.replace("show", "");
-        }, 3000);
-    }
     </script>
     </html>
 </apex:page>

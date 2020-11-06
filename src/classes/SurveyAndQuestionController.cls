@@ -1,4 +1,4 @@
-global virtual with sharing class SurveyAndQuestionController{
+global virtual without sharing class SurveyAndQuestionController{
 
   //public List<SelectOption> questionTypeOptions {get; private set;}
   public String  showSingleSelect               {get; set;}

@@ -285,14 +285,6 @@
                             <option name="selected" value="true" />
                           </MetadataEntry>
                           <MetadataEntry>
-                            <option name="name" value="AS_WebToLeadController" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
-                            <option name="name" value="AS_WebToLeadWrapper" />
-                            <option name="selected" value="true" />
-                          </MetadataEntry>
-                          <MetadataEntry>
                             <option name="name" value="AS_PostToChatter" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
@@ -302,6 +294,38 @@
                           </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ViewSurveyController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="AS_WebToLeadController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyForceUtil" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyManagerController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveySitesUtil" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="SurveyTestingUtil" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewShareSurveyComponentController" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewSurveyControllerWithoutSharing" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ViewSurveyResultsComponentController" />
                             <option name="selected" value="true" />
                           </MetadataEntry>
                         </list>

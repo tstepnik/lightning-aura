@@ -1,7 +1,7 @@
 /* Controller associated with pages rendering the survey.
 * Used by SurveyPage, ResultsPage, TakeSurvey
 */
-global virtual with sharing class ViewSurveyController {
+global virtual without sharing class ViewSurveyController {
     public String  qQuestion                      {get; set;}
     public Boolean qRequired                      {get; set;}
     public String  qChoices                       {get; set;}
@@ -58,6 +58,9 @@ global virtual with sharing class ViewSurveyController {
         }
         if(contactId == null || contactId.length()<15){
             contactId = 'none';
+        }
+        if (leadId == null || leadId.length() < 15) {
+            leadId = 'none';
         }
         surveyId = String.escapeSingleQuotes(surveyId);
         caseId = String.escapeSingleQuotes(caseId);
